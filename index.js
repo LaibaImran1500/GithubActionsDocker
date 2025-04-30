@@ -11,10 +11,9 @@ app.post('/sum', (req, res) => {
   res.json({ result: a + b });
 });
 
-app.listen(3000, () => console.log('Server running on port 3000'));
-
 module.exports = app;
 
-//for test
-//curl.exe -X POST http://localhost:3000/sum -H "Content-Type: application/json" -d '{\"a\":5,\"b\":3}'
-
+// Only run server if this file is run directly
+if (require.main === module) {
+  app.listen(3000, () => console.log('Server running on port 3000'));
+}
