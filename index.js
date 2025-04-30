@@ -15,6 +15,6 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 module.exports = app;
 
-//to test
+//for test
 //curl.exe -X POST http://localhost:3000/sum -H "Content-Type: application/json" -d '{\"a\":5,\"b\":3}'
 
